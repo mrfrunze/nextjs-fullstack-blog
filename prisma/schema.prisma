@@ -1,0 +1,23 @@
+datasource db {
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  directUrl         = env("DIRECT_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model TestProfile {
+id  String @id @default(uuid())
+name String
+}
+
+model Post {
+  id          Int      @id @default(autoincrement()) // Автоинкрементирующийся ID
+  title       String   // Имя поста
+  description String   // Описание поста
+  imageURL    String?  // Картинка (может быть пустым значением)
+  author      String   // Автор поста
+  createdAt   DateTime @default(now()) // Дата создания
+}

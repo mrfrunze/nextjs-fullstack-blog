@@ -1,0 +1,28 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title{
+  color: gray;
+  font-weight: bold;
+}
+
+.username{
+  font-weight: 500;
+}
+
+.imgContainer{
+  width: 400px;
+  max-height: 300px;
+  height: auto;
+  overflow: hidden;
+}
+
+.imgContainer img{
+  width: 100%;
+  height: auto; /* Сохраняем пропорции изображения */
+  object-fit: cover;
+  display: block;
+}
